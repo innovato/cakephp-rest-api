@@ -91,7 +91,7 @@ class AppController extends Controller
     {
         parent::beforeRender($event);
 
-        $this->response->getStatusCode($this->httpStatusCode);
+        $this->response->statusCode($this->httpStatusCode);
 
         if (200 != $this->httpStatusCode) {
             $this->responseStatus = $this->responseFormat['statusNokText'];
